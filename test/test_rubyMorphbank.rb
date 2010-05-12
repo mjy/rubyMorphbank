@@ -30,7 +30,6 @@ class TestRequest < Test::Unit::TestCase
 end
 
 
-
 class TestResponse < Test::Unit::TestCase
 
   should "return initialize with a unparameterized request" do

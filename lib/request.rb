@@ -8,7 +8,7 @@ class Request
   FORMAT = 'id'
 
   # a subset of VALID_OPTIONS, these are concatenated in the request
-  URI_PARAMS = [:limit, :format, :depth, :objecttype, :first_result, :keywords, :id]
+  URI_PARAMS = [:limit, :format, :depth, :objecttype, :firstResult, :keywords, :id, :taxonName, :user, :group, :change, :lastDateChanged, :numChangeDays]
 
   # possible options for a Request instance 
   VALID_OPTIONS = {'v3' => URI_PARAMS + [:version, :method] } 
@@ -23,7 +23,7 @@ class Request
       :format => FORMAT,                # 'id' (brief results) or 'svc' (schema based results)
       :depth => DEPTH,
       :objecttype => OBJECTTYPE,        #  [nil, Taxon, Image, Character, Specimen, View, Matrix, Locality, Collection, OTU ] (nil = all)
-      :first_result => 0,
+      :firstResult => 0,
       :keywords => ''
     }.merge!(options)
 
