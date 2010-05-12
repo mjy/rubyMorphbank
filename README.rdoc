@@ -1,6 +1,6 @@
 = rubyMorphbank
 
-Description goes here.
+A request/response library for the Morphbank (http://morphbank.net) API.
 
 == Note on Patches/Pull Requests
  

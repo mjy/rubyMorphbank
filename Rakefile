@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "rubyMorphbank"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Simple Morphbank (http://morphbank.net) services accessor.}
+    gem.description = %Q{Uses the Morphbank API to query and return results from the Morphbank database.}
     gem.email = "diapriid@gmail.com"
     gem.homepage = "http://github.com/mjy/rubyMorphbank"
     gem.authors = ["mjy"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.files +=  FileList['init.rb', 'lib/**/*.rb'].to_a
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
