@@ -66,7 +66,7 @@ class Response
 
   # pagination
   def link_back?
-    (get_int('firstResult') > @request.request_options[:limit]) and return true
+    (get_int('firstResult') > @request.request_options[:limit].to_i) and return true
     false
   end
 
