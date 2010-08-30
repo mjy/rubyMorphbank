@@ -14,7 +14,6 @@ class Response
   attr :images
 
   def initialize(request = Request.new)
-
    
     begin 
       @response = Net::HTTP.get_response(URI.parse(request.request_url)).body
