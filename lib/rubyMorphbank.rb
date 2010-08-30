@@ -13,10 +13,11 @@ module RubyMorphbank
   require File.expand_path(File.join(File.dirname(__FILE__), '../lib/Request'))
   require File.expand_path(File.join(File.dirname(__FILE__), '../lib/Response'))
 
+  SERVICES_URI = 'http://services.morphbank.net/mb3/request?' 
+
   class RubyMorphbankError < StandardError
   end
 
-  SERVICES_URI = 'http://services.morphbank.net/mb3/request?' 
 
   class Rmb
     attr_accessor :opt
