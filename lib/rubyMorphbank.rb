@@ -10,8 +10,8 @@ module RubyMorphbank
   # schema is at  http://morphbank.net/schema/mbsvc3.xsd  
   # web interface to API is at http://services.morphbank.net/mb3
 
-  require File.expand_path(File.join(File.dirname(__FILE__), '../lib/Request'))
-  require File.expand_path(File.join(File.dirname(__FILE__), '../lib/Response'))
+  require File.expand_path(File.join(File.dirname(__FILE__), '../lib/request.rb'))
+  require File.expand_path(File.join(File.dirname(__FILE__), '../lib/response.rb'))
 
   SERVICES_URI = 'http://services.morphbank.net/mb3/request?' 
 
