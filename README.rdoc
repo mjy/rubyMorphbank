@@ -10,7 +10,7 @@ rubyMorphbank is a request/response Ruby gem library for the Morphbank (http://m
 
 == Usage
 
-See the tests for usage at present.
+See the tests (test/test_rubyMorphbank.rb) for usage.
 
 === Basic pattern
 
