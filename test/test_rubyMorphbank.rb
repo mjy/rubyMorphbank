@@ -24,7 +24,7 @@ class TestRequest < Test::Unit::TestCase
   should "return a properly formatted request url with no options" do
     @rmb = Rmb.new
     assert @request = @rmb.request
-    assert_equal   "http://services.morphbank.net/mb3/request?method=search&depth=1&first_result=0&format=id&keywords=&limit=10&objecttype=Image",  @request.request_url 
+    assert_equal  "http://services.morphbank.net/mb3/request?method=search&depth=1&firstResult=0&format=id&keywords=&limit=10&objecttype=Image",  @request.request_url 
   end
 
 end
@@ -77,7 +77,7 @@ class TestResponse < Test::Unit::TestCase
     assert_equal 'Image', @request.get_response.get_text('objecttypes')
   end
 
-  # return a link to a numbnail in a call for a single image
+  # return a link to a thumbnail in a call for a single image
   should "return a URI to a thumb for a single object query" do
     foo =  Rmb.new.request(:format => 'svc', :id => 195815, :method => 'id')
     assert_equal 'http://images.morphbank.net/?id=195815&imgType=thumb', foo.get_response.get_text('thumbUrl')

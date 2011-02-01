@@ -33,7 +33,8 @@ class Request
     end 
 
 
-    opt[:keywords].gsub!(/\s*/, '+') 
+    # TODO: add some proper sanitation?!
+    opt[:keywords].gsub!(/\s+/, '+') if opt[:keywords].length > 0
 
 
     # create the request 

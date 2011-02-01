@@ -1,17 +1,33 @@
 = rubyMorphbank
 
-A request/response library for the Morphbank (http://morphbank.net) API.
+== Description
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+rubyMorphbank is a request/response Ruby gem library for the Morphbank (http://morphbank.net) API.  See the tests for usage at present.  
+
+== Installation
+
+ gem install rubyMorphbank 
+
+== Usage
+
+See the tests for usage at present.
+
+
+=== Basic pattern
+
+ request = Rmb.new.request 
+ request.request_url             # => "http://services.morphbank.net/mb3/request?method=search&depth=1&firstResult=0&format=id&keywords=&limit=10&objecttype=Image"
+ response = request.get_response
+
+=== Return a link to a thumbnail in a call for a single image
+
+ foo =  Rmb.new.request(:format => 'svc', :id => 195815, :method => 'id')
+ assert_equal 'http://images.morphbank.net/?id=195815&imgType=thumb', foo.get_response.get_text('thumbUrl')
 
 == Copyright
 
-Copyright (c) 2010 mjy. See LICENSE for details.
+Copyright (c) 2010 mjy. See LICENSE for details.a
+
+== More information
+
+* The Morphbank Services page is at http://services.morphbank.net/mb3/.
